@@ -1,0 +1,12 @@
+/node_modules
+.idea/
+converted-images/
+downloads/
+dist/
+converted-images/
+converted-videos/
+downloads/
+downloaded-images/
+downloaded-videos/
+.wwebjs_auth/
+.wwebjs_cache/

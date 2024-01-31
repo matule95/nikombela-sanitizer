@@ -33,7 +33,7 @@ export async function sanitizeVideo(fileName: string): Promise<string> {
         videoName
     );
     return new Promise((resolve, reject) => {
-        ffmpeg().input(fileName).outputOptions('-c:v', 'libx264', `-preset`, 'ultrafast ').saveToFile(videoName).on('end', () => {
+        ffmpeg().input(fileName).outputOptions('-c:v', 'libx264', '-profile:v', 'baseline', '-preset', 'ultrafast').saveToFile(videoName).on('end', () => {
             return resolve(videoName)
         }).on('error', (error) => {
             return reject(error);
